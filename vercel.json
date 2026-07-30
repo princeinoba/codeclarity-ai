@@ -7,7 +7,7 @@
   "cleanUrls": true,
   "trailingSlash": true,
   "regions": ["iad1"],
-  "functions": {"api/**/*.js": {"runtime": "nodejs24.x", "maxDuration": 15, "memory": 512}},
+  "functions": {"api/**/*.js": {"maxDuration": 15, "memory": 512}},
   "redirects": [
     {"source": "/index", "destination": "/", "permanent": true},
     {"source": "/index.html", "destination": "/", "permanent": true},
