@@ -29,7 +29,7 @@ High-confidence source/config secret findings: 0
 Canonical documents: 12
 Physical HTML files: 13
 Generated files: 47
-Build assertions: 226 passed
+Build assertions: 229 passed
 HTTP smoke assertions: 58 passed
 Complete generated output: 264,489 bytes
 Browser JavaScript: 83,116 bytes
@@ -68,6 +68,7 @@ Clean-room generated-tree SHA-256: 96f48686751a5185c93fcca76a4af99829436573aed1b
 5. A policy scanner matched its own test pattern and the intentional offline retry action. Policy scope and the retry implementation were corrected without weakening source checks.
 6. Direct browser verification found that maxlength=4 truncated raw initials before domain normalization. The field now accepts the same 32-character bounded raw input as the domain normalizer, then strips non-letters and caps the stored value at four; build and domain regression assertions cover the sequence.
 7. The first Vercel Preview build rejected `nodejs24.x` as a custom Function runtime package string. Node Functions now inherit the supported Node 24 project/package setting, while `maxDuration` and memory bounds remain explicit and release-asserted.
+8. Preview HTTP checks showed Vercel canonicalizes legacy `.html` and extensionless paths to trailing-slash paths before custom redirects. Explicit `/index/`, `/quiz/` and `/highscores/` redirect sources now preserve all historical entry points.
 
 ## Browser evidence
 

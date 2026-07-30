@@ -11,8 +11,11 @@
   "redirects": [
     {"source": "/index", "destination": "/", "permanent": true},
     {"source": "/index.html", "destination": "/", "permanent": true},
+    {"source": "/index/", "destination": "/", "permanent": true},
     {"source": "/quiz", "destination": "/sprint/", "permanent": true},
+    {"source": "/quiz/", "destination": "/sprint/", "permanent": true},
     {"source": "/highscores", "destination": "/leaderboard/", "permanent": true},
+    {"source": "/highscores/", "destination": "/leaderboard/", "permanent": true},
     {"source": "/highscores.html", "destination": "/leaderboard/", "permanent": true}
   ],
   "headers": [
