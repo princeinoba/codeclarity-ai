@@ -29,19 +29,19 @@ High-confidence source/config secret findings: 0
 Canonical documents: 12
 Physical HTML files: 13
 Generated files: 47
-Build assertions: 229 passed
+Build assertions: 231 passed
 HTTP smoke assertions: 58 passed
-Complete generated output: 264,489 bytes
+Complete generated output: 264,918 bytes
 Browser JavaScript: 83,116 bytes
 CSS: 27,910 bytes
 Deterministic files compared: 47
-Generated-tree SHA-256: 96f48686751a5185c93fcca76a4af99829436573aed1b93402ead41443c3cb97
+Generated-tree SHA-256: 43558081f7912f6d683416fe4523736ff4fc0abcbfc9e89529ef3dcc3a467186
 ```
 
 ## Output budgets
 
 ```text
-Complete output: 264,489 / 1,500,000 bytes
+Complete output: 264,918 / 1,500,000 bytes
 Browser JavaScript: 83,116 / 140,000 bytes
 CSS: 27,910 / 70,000 bytes
 ```
@@ -56,7 +56,7 @@ npm ci --ignore-scripts: passed
 npm audit --omit=dev: 0 vulnerabilities
 npm run verify: passed
 Clean-room generated files: 47
-Clean-room generated-tree SHA-256: 96f48686751a5185c93fcca76a4af99829436573aed1b93402ead41443c3cb97
+Clean-room generated-tree SHA-256: 43558081f7912f6d683416fe4523736ff4fc0abcbfc9e89529ef3dcc3a467186
 ```
 
 ## Defects caught during verification
@@ -70,6 +70,7 @@ Clean-room generated-tree SHA-256: 96f48686751a5185c93fcca76a4af99829436573aed1b
 7. The first Vercel Preview build rejected `nodejs24.x` as a custom Function runtime package string. Node Functions now inherit the supported Node 24 project/package setting, while `maxDuration` and memory bounds remain explicit and release-asserted.
 8. Preview HTTP checks showed Vercel canonicalizes legacy `.html` and extensionless paths to trailing-slash paths before custom redirects. Explicit `/index/`, `/quiz/` and `/highscores/` redirect sources now preserve all historical entry points.
 9. Vercel reports malformed request-body parsing as a read error before the Coach handler receives text. The Function adapter now maps non-size read failures to the 400 invalid-JSON path while preserving 413 only for true `RangeError` size failures.
+10. Local Lighthouse identified insufficient contrast on five small category badges and a footer logo link without a reliable accessible name. The light-theme tokens now provide measured contrast ratios from 4.96:1 to 5.81:1, the footer link has an explicit label, release assertions cover both changes, and the repeat audit scored 100 accessibility and 100 best practices with zero console errors.
 
 ## Browser evidence
 
@@ -105,6 +106,8 @@ Exactly one primary h1 on generated documents: passed
 Horizontal overflow on checked mobile pages: 0
 Console errors: 0
 Page errors: 0
+Local Lighthouse accessibility: 100
+Local Lighthouse best practices: 100
 Study Coach mode: deterministic
 Service worker state: activated
 Offline canonical navigation: passed
