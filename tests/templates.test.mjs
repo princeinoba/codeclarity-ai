@@ -1,0 +1,9 @@
+import test from "node:test";import assert from "node:assert/strict";import * as pages from "../src/templates/pages.mjs";import { renderLayout } from "../src/templates/layout.mjs";
+const cases=[
+ ["/",pages.homePage],["/practice/",pages.practicePage],["/sprint/",pages.sprintPage],["/question-bank/",pages.questionBankPage],["/review/",pages.reviewPage],["/progress/",pages.progressPage],["/leaderboard/",pages.leaderboardPage],["/coach/",pages.coachPage],["/about/",pages.aboutPage],["/privacy/",pages.privacyPage],["/offline/",pages.offlinePage],["/404/",pages.notFoundPage]
+];
+test("all pages render a complete semantic document",()=>{for(const[path,page]of cases){const html=renderLayout({title:`Test ${path}`,description:"A sufficiently descriptive test description for this page.",path,content:page(),robots:"noindex,follow"});assert.match(html,/<!doctype html>/i);assert.equal((html.match(/<main\b/g)||[]).length,1,path);assert.equal((html.match(/<h1\b/g)||[]).length,1,path);assert.match(html,/class="skip-link"/);assert.match(html,/site\.webmanifest/);assert.doesNotMatch(html,/onclick=|location\.reload\(\)|bootstrapcdn|fontawesome|jquery/i)}});
+test("home communicates the three connected learning surfaces",()=>{const h=pages.homePage();assert.match(h,/Practice Lab/);assert.match(h,/Interview Sprint/);assert.match(h,/Study Coach/);assert.match(h,/36/)});
+test("practice and sprint expose explicit completion surfaces",()=>{assert.match(pages.practicePage(),/data-practice-result/);assert.match(pages.sprintPage(),/data-sprint-result/);assert.match(pages.sprintPage(),/−10s/)});
+test("privacy accurately states local limits",()=>{const h=pages.privacyPage();assert.match(h,/maximum 40/);assert.match(h,/maximum 20/);assert.match(h,/No account/)});
+test("404 has recovery links",()=>{const h=pages.notFoundPage();assert.match(h,/Return home/);assert.match(h,/Browse questions/) });

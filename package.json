@@ -1,0 +1,20 @@
+{
+  "name": "codeclarity-ai",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A local-first coding assessment, review and AI-assisted study coach rebuilt from bootcamp-homework4.",
+  "type": "module",
+  "engines": { "node": "24.x" },
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "lint": "node scripts/lint.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "verify:build": "node scripts/verify-build.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "verify:determinism": "node scripts/verify-determinism.mjs",
+    "scan:secrets": "node scripts/secret-scan.mjs",
+    "verify": "npm run lint && npm test && npm run scan:secrets && npm run build && npm run verify:build && npm run smoke && npm run verify:determinism",
+    "check": "npm run verify"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "mode": "managed Chromium document-content harness",
+  "routes": [
+    "home-desktop",
+    "home-mobile",
+    "practice-desktop",
+    "question-bank-desktop",
+    "sprint-desktop",
+    "review-desktop",
+    "progress-desktop",
+    "leaderboard-mobile",
+    "coach-desktop",
+    "about-desktop",
+    "privacy-tablet",
+    "offline-mobile",
+    "404-mobile"
+  ],
+  "interactions": {
+    "theme": "light",
+    "commandPalette": true,
+    "mobileNavigation": true,
+    "practiceComplete": true,
+    "questionSearchCount": 8,
+    "bookmark": true,
+    "sprintComplete": true,
+    "reviewCards": 10,
+    "progressMetrics": 4,
+    "leaderboardRows": 1,
+    "coachPlan": true
+  },
+  "semantic": {
+    "home-desktop": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "CodeClarity AI \u2014 Coding Practice, Sprint and Study Coach"
+    },
+    "home-mobile": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "CodeClarity AI \u2014 Coding Practice, Sprint and Study Coach"
+    },
+    "practice-desktop": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Practice Lab | CodeClarity AI"
+    },
+    "question-bank-desktop": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Question Bank | CodeClarity AI"
+    },
+    "sprint-desktop": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Interview Sprint | CodeClarity AI"
+    },
+    "review-desktop": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Answer Review | CodeClarity AI"
+    },
+    "progress-desktop": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Progress | CodeClarity AI"
+    },
+    "leaderboard-mobile": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Local Leaderboard | CodeClarity AI"
+    },
+    "coach-desktop": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Study Coach | CodeClarity AI"
+    },
+    "about-desktop": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "About the Rebuild | CodeClarity AI"
+    },
+    "privacy-tablet": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Privacy | CodeClarity AI"
+    },
+    "offline-mobile": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Offline | CodeClarity AI"
+    },
+    "404-mobile": {
+      "main": 1,
+      "h1": 1,
+      "duplicateIds": [],
+      "unnamedButtons": 0,
+      "imagesMissingAlt": 0,
+      "imagesMissingDimensions": 0,
+      "overflow": 0,
+      "title": "Page Not Found | CodeClarity AI"
+    }
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "limitations": [
+    "Direct URL navigation blocked by managed Chromium URL policy",
+    "Service-worker registration, true offline navigation, runtime HTTP headers and Lighthouse require Vercel Preview"
+  ]
+}
